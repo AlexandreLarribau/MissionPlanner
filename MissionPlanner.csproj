@@ -92,6 +92,7 @@
       <HintPath>.\extlibs\BitMiracle.LibTiff.NetStandard.dll</HintPath>
       <Private>true</Private>
     </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -347,6 +348,9 @@
     <PackageReference Include="GDAL" Version="2.3.2" />
     <PackageReference Include="GDAL.Native">
       <Version>2.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="GeoAPI.CoordinateSystems">
+      <Version>1.7.5</Version>
     </PackageReference>
     <PackageReference Include="GeoidHeightsDotNet">
       <Version>1.0.1</Version>

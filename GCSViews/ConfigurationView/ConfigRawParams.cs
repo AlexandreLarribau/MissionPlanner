@@ -16,7 +16,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
-using org.mariuszgromada.math.mxparser;
+//using org.mariuszgromada.math.mxparser;
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
@@ -381,7 +381,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 var value = (string)Params[e.ColumnIndex, e.RowIndex].Value;
                 value = value.Replace(',', '.');
 
-                var newvalue = (float) new Expression(value).calculate();
+                var newvalue = 0; //TODO  (float) new Expression(value).calculate();
                 if (float.IsNaN(newvalue) || float.IsInfinity(newvalue))
                 {
                     throw new Exception();
