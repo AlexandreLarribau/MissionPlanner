@@ -37,8 +37,6 @@ namespace MissionPlanner.GCSViews
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBoxheli = new MissionPlanner.Controls.PictureBoxMouseOver();
-            this.pictureBoxquad = new MissionPlanner.Controls.PictureBoxMouseOver();
             this.pictureBoxrover = new MissionPlanner.Controls.PictureBoxMouseOver();
             this.pictureBoxplane = new MissionPlanner.Controls.PictureBoxMouseOver();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,8 +58,6 @@ namespace MissionPlanner.GCSViews
             this.label2 = new System.Windows.Forms.Label();
             this.num_simspeed = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxheli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxquad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxrover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplane)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -108,8 +104,6 @@ namespace MissionPlanner.GCSViews
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBoxheli);
-            this.panel1.Controls.Add(this.pictureBoxquad);
             this.panel1.Controls.Add(this.pictureBoxrover);
             this.panel1.Controls.Add(this.pictureBoxplane);
             this.panel1.Name = "panel1";
@@ -133,28 +127,6 @@ namespace MissionPlanner.GCSViews
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            // 
-            // pictureBoxheli
-            // 
-            resources.ApplyResources(this.pictureBoxheli, "pictureBoxheli");
-            this.pictureBoxheli.ImageNormal = ((System.Drawing.Image)(resources.GetObject("pictureBoxheli.ImageNormal")));
-            this.pictureBoxheli.ImageOver = ((System.Drawing.Image)(resources.GetObject("pictureBoxheli.ImageOver")));
-            this.pictureBoxheli.Name = "pictureBoxheli";
-            this.pictureBoxheli.selected = false;
-            this.pictureBoxheli.TabStop = false;
-            this.pictureBoxheli.Tag = "heli";
-            this.pictureBoxheli.Click += new System.EventHandler(this.pictureBoxheli_Click);
-            // 
-            // pictureBoxquad
-            // 
-            resources.ApplyResources(this.pictureBoxquad, "pictureBoxquad");
-            this.pictureBoxquad.ImageNormal = ((System.Drawing.Image)(resources.GetObject("pictureBoxquad.ImageNormal")));
-            this.pictureBoxquad.ImageOver = ((System.Drawing.Image)(resources.GetObject("pictureBoxquad.ImageOver")));
-            this.pictureBoxquad.Name = "pictureBoxquad";
-            this.pictureBoxquad.selected = false;
-            this.pictureBoxquad.TabStop = false;
-            this.pictureBoxquad.Tag = "copter";
-            this.pictureBoxquad.Click += new System.EventHandler(this.pictureBoxquad_Click);
             // 
             // pictureBoxrover
             // 
@@ -358,8 +330,6 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this, "$this");
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxheli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxquad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxrover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplane)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -382,8 +352,6 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private PictureBoxMouseOver pictureBoxheli;
-        private PictureBoxMouseOver pictureBoxquad;
         private PictureBoxMouseOver pictureBoxrover;
         private PictureBoxMouseOver pictureBoxplane;
         private System.Windows.Forms.GroupBox groupBox1;
