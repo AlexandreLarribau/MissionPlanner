@@ -1383,7 +1383,7 @@ namespace MissionPlanner
             _connectionControl.CMB_serialport.Items.Add("UDPCl");
             _connectionControl.CMB_serialport.Items.Add("WS");
         }
-
+        // 
         private void MenuFlightData_Click(object sender, EventArgs e)
         {
             MyView.ShowScreen("FlightData");
