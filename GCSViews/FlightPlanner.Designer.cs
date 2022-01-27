@@ -829,7 +829,6 @@ namespace MissionPlanner.GCSViews
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteWPToolStripMenuItem,
             this.insertWpToolStripMenuItem,
@@ -1392,7 +1391,6 @@ namespace MissionPlanner.GCSViews
             // 
             // contextMenuStripPoly
             // 
-            this.contextMenuStripPoly.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripPoly.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addPolygonPointToolStripMenuItem,
             this.clearPolygonToolStripMenuItem,
@@ -1431,7 +1429,6 @@ namespace MissionPlanner.GCSViews
             // 
             // contextMenuStripZoom
             // 
-            this.contextMenuStripZoom.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripZoom.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zoomToVehicleToolStripMenuItem,
             this.zoomToMissionToolStripMenuItem,

@@ -69,7 +69,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(290, 465);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(232, 479);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // timer1
@@ -79,9 +79,11 @@
             // 
             // ControlSensorsStatus
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ControlSensorsStatus";
-            this.Size = new System.Drawing.Size(290, 465);
+            this.Size = new System.Drawing.Size(232, 479);
             this.ResumeLayout(false);
 
         }
