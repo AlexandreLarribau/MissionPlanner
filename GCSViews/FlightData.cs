@@ -5585,5 +5585,6 @@ namespace MissionPlanner.GCSViews
                 showIconsToolStripMenuItem.Text = "Show icons";
             }
         }
+
     }
 }
