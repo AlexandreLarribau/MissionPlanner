@@ -453,7 +453,7 @@
   <data name="quickView2.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>100, 27</value>
   </data>
-  <data name="quickView2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="quickView2.Size" type="System.Drawing.Size, System.Drawing"> 
     <value>166, 34</value>
   </data>
   <data name="quickView2.TabIndex" type="System.Int32, mscorlib">
