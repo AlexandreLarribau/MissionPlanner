@@ -73,7 +73,7 @@ namespace MissionPlanner.GCSViews
         RollingPointPairList list1 = new RollingPointPairList(1200);
         RollingPointPairList list10 = new RollingPointPairList(1200);
         CurveItem list10curve;
-        PropertyInfo list10item;
+        PropertyInfo list10item; 
         CurveItem list1curve;
         PropertyInfo list1item;
         RollingPointPairList list2 = new RollingPointPairList(1200);
