@@ -1267,6 +1267,7 @@ namespace MissionPlanner.GCSViews
             }
         }
 
+        
         private void BUT_quickauto_Click(object sender, EventArgs e)
         {
             try
@@ -1629,6 +1630,23 @@ namespace MissionPlanner.GCSViews
             }
         }
 
+        private void Btn_Start_Mission_Click(object sender, EventArgs e)    //Alex
+        {
+            try
+            {
+                // on démarre la mission 
+                ((Control)sender).Enabled = false;
+
+                MainV2.comPort.setWPCurrent(MainV2.comPort.MAV.sysid, MainV2.comPort.MAV.compid, 0); // set nav to
+
+                //MainV2.comPort.setMode("AUTO"); Ya ca dans MT mais pas MP 
+            }
+            catch
+            {
+                CustomMessageBox.Show("Fail in button send start mission");
+            }
+        }
+
         private void BUTrestartmission_Click(object sender, EventArgs e)
         {
             try
@@ -1667,11 +1685,6 @@ namespace MissionPlanner.GCSViews
                 ZedGraphTimer.Stop();
                 zg1.Visible = false;
             }
-        }
-
-        private void CheckAndBindPreFlightData()
-        {
-            //this.Invoke((Action) delegate { preFlightChecklist1.BindData(); });
         }
 
         private void CHK_autopan_CheckedChanged(object sender, EventArgs e)
@@ -1966,18 +1979,6 @@ namespace MissionPlanner.GCSViews
             }
         }
 
-        void chk_log_CheckedChanged(object sender, EventArgs e)
-        {
-            if (((CheckBox) sender).Checked)
-            {
-                zg1.GraphPane.YAxis.Type = AxisType.Log;
-            }
-            else
-            {
-                zg1.GraphPane.YAxis.Type = AxisType.Linear;
-            }
-        }
-
         private void CMB_modes_Click(object sender, EventArgs e)
         {
             string current_value = CMB_modes.Text;
@@ -2127,10 +2128,6 @@ namespace MissionPlanner.GCSViews
 
             hud1.Refresh();
             huddropoutresize = false;
-        }
-
-        private void dropOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
         }
 
         private void FlightData_FormClosing(object sender, FormClosingEventArgs e)
@@ -2306,14 +2303,6 @@ namespace MissionPlanner.GCSViews
             }
         }
 
-        private void FlightData_Resize(object sender, EventArgs e)
-        {
-            //Gspeed;
-            //Galt;
-            //Gheading;
-            //attitudeIndicatorInstrumentControl1;
-        }
-
         private void flightPlannerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Control ctl in splitContainer1.Panel2.Controls)
@@ -2396,10 +2385,6 @@ namespace MissionPlanner.GCSViews
         {
             MainV2.comPort.setMountControl((float) trackBarPitch.Value * 100.0f, (float) trackBarRoll.Value * 100.0f,
                 (float) trackBarYaw.Value * 100.0f, false);
-        }
-
-        private void gMapControl1_Click(object sender, EventArgs e)
-        {
         }
 
         private void gMapControl1_MouseDown(object sender, MouseEventArgs e)
@@ -2507,11 +2492,6 @@ namespace MissionPlanner.GCSViews
             center.Position = point;
 
             UpdateOverlayVisibility();
-        }
-
-        private void gMapControl1_Resize(object sender, EventArgs e)
-        {
-            gMapControl1.Zoom = gMapControl1.Zoom + 0.01;
         }
 
         private void goHereToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3642,7 +3622,6 @@ namespace MissionPlanner.GCSViews
             Console.WriteLine("FD Main loop exit");
         }
 
-
         public void updateMarkersAsNeeded<TBuilder, TMarker>(IEnumerable<TBuilder> list, GMapOverlay gMapOverlay,
             Func<TBuilder, string> GetTagSource, Func<GMapMarker, string> GetTagMarker,
             Func<TBuilder, GMapMarker> create, Action<TBuilder, GMapMarker> update)
@@ -4027,11 +4006,6 @@ namespace MissionPlanner.GCSViews
             });
         }
 
-        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Refresh();
-        }
-
         void run_selected_script()
         {
             script = new Script(checkBoxRedirectOutput.Checked);
@@ -4291,7 +4265,7 @@ namespace MissionPlanner.GCSViews
                 if (tableLayoutPanelQuick.RowStyles.Count <= j)
                     tableLayoutPanelQuick.RowStyles.Add(new RowStyle());
                 tableLayoutPanelQuick.RowStyles[j].SizeType = SizeType.Percent;
-                tableLayoutPanelQuick.RowStyles[j].Height = 100.0f / tableLayoutPanelQuick.RowCount;
+                tableLayoutPanelQuick.RowStyles[j].Height = 50.0f / tableLayoutPanelQuick.RowCount; 
             }
 
             tableLayoutPanelQuick.Controls.ForEach(a => ((Control) a).Invalidate());
@@ -5606,5 +5580,6 @@ namespace MissionPlanner.GCSViews
                 showIconsToolStripMenuItem.Text = "Show icons";
             }
         }
+
     }
 }

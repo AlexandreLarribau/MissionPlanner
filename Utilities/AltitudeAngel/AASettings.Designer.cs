@@ -155,7 +155,7 @@ namespace MissionPlanner.Utilities.AltitudeAngel
             // lbl_FlightReportWhat
             // 
             this.lbl_FlightReportWhat.AutoSize = true;
-            this.lbl_FlightReportWhat.Location = new System.Drawing.Point(12, 57);
+            this.lbl_FlightReportWhat.Location = new System.Drawing.Point(12, 30); // Alex avant yavait 57
             this.lbl_FlightReportWhat.Name = "lbl_FlightReportWhat";
             this.lbl_FlightReportWhat.Size = new System.Drawing.Size(136, 25);
             this.lbl_FlightReportWhat.TabIndex = 10;
